@@ -1,0 +1,1317 @@
+Program.Sub.ScreenSU.Start
+Gui.F_BankInfo..Create
+Gui.F_BankInfo..Caption("Seleccion de Informacion Bancaria")
+Gui.F_BankInfo..Size(7545,5520)
+Gui.F_BankInfo..MinX(0)
+Gui.F_BankInfo..MinY(0)
+Gui.F_BankInfo..Position(0,0)
+Gui.F_BankInfo..BackColor(-2147483633)
+Gui.F_BankInfo..MousePointer(0)
+Gui.F_BankInfo..MousePointer(0)
+Gui.F_BankInfo..Event(UnLoad,F_BankInfo_UnLoad)
+Gui.F_BankInfo.lblNomBanco.Create(Label,"CATALAGO BANCOS SAT",True,2670,255,0,855,1365,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.lblCUENTA.Create(Label,"CUENTA",True,1935,255,0,855,2190,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.lblABBA.Create(Label,"ABA",True,1935,255,0,855,3540,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.lblCLABE.Create(Label,"CLABE",True,1935,255,0,855,2610,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.lblSWIFT.Create(Label,"SWIFT",True,1935,255,0,855,3075,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.txtNomBanco.Create(TextBox,"",True,2595,300,0,3645,1275,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtNomBanco.MaxLength(50)
+Gui.F_BankInfo.txtNomBanco.Locked(True)
+Gui.F_BankInfo.txtCuenta.Create(TextBox,"",True,2595,300,0,3645,2100,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtCuenta.NumericOnly(2)
+Gui.F_BankInfo.txtCuenta.MaxLength(10)
+Gui.F_BankInfo.txtABBA.Create(TextBox,"",True,2595,300,0,3645,3480,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtABBA.MaxLength(9)
+Gui.F_BankInfo.txtSwift.Create(TextBox,"",True,2595,300,0,3645,3015,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtSwift.MaxLength(11)
+Gui.F_BankInfo.txtClabe.Create(TextBox,"",True,2595,300,0,3645,2535,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtClabe.NumericOnly(2)
+Gui.F_BankInfo.txtClabe.MaxLength(18)
+Gui.F_BankInfo.cmdSaveInfoBanco.Create(Button)
+Gui.F_BankInfo.cmdSaveInfoBanco.Size(1650,570)
+Gui.F_BankInfo.cmdSaveInfoBanco.Position(3495,4200)
+Gui.F_BankInfo.cmdSaveInfoBanco.Caption("GUARDAR BANCO")
+Gui.F_BankInfo.cmdSaveInfoBanco.Event(Click,cmdSaveInfoBanco2_Click)
+Gui.F_BankInfo.lbl2.Create(Label,"DESCRIPCION",True,1935,255,0,855,1785,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.txtDesc.Create(TextBox,"",True,2595,300,0,3645,1680,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtDesc.MaxLength(50)
+Gui.F_BankInfo.lbl1.Create(Label,"Selecciona Informacion Bancaria",True,4230,255,0,915,465,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.cmdNewBank.Create(Button)
+Gui.F_BankInfo.cmdNewBank.Size(1650,570)
+Gui.F_BankInfo.cmdNewBank.Position(150,4215)
+Gui.F_BankInfo.cmdNewBank.Caption("NUEVO BANCO")
+Gui.F_BankInfo.cmdNewBank.Event(Click,cmdNewBank_Click)
+Gui.F_BankInfo.cmdBancosBrowser.Create(Button)
+Gui.F_BankInfo.cmdBancosBrowser.Size(375,375)
+Gui.F_BankInfo.cmdBancosBrowser.Position(6360,1200)
+Gui.F_BankInfo.cmdBancosBrowser.Caption("^")
+Gui.F_BankInfo.cmdBancosBrowser.Event(Click,cmdBNat_Click)
+Gui.F_BankInfo.cmdSaveInfoBanco2.Create(Button)
+Gui.F_BankInfo.cmdSaveInfoBanco2.Size(1770,570)
+Gui.F_BankInfo.cmdSaveInfoBanco2.Position(5175,4185)
+Gui.F_BankInfo.cmdSaveInfoBanco2.Caption("GUARDAR COMO BANCO PRINCIPAL")
+Gui.F_BankInfo.cmdSaveInfoBanco2.Event(Click,cmdSaveBanco_Click)
+Gui.F_BankInfo.lblOpBanco.Create(Label,"BANCO PRINCIPAL",True,1935,255,0,855,915,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfo.txtOpBanco.Create(TextBox,"",True,2595,300,0,3645,825,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfo.txtOpBanco.MaxLength(50)
+Gui.F_BankInfo.txtOpBanco.Locked(True)
+Gui.F_BankInfo.cmdOpBanco.Create(Button)
+Gui.F_BankInfo.cmdOpBanco.Size(375,375)
+Gui.F_BankInfo.cmdOpBanco.Position(6375,750)
+Gui.F_BankInfo.cmdOpBanco.Caption("^")
+Gui.F_BankInfo.cmdOpBanco.Event(Click,cmdOpBanco_Click)
+Gui.F_BankInfo.cmdDELETE.Create(Button)
+Gui.F_BankInfo.cmdDELETE.Size(1650,570)
+Gui.F_BankInfo.cmdDELETE.Position(1860,4215)
+Gui.F_BankInfo.cmdDELETE.Caption("ELIMINAR BANCO")
+Gui.F_BankInfo.cmdDELETE.Event(Click,cmdDELETE_Click)
+Gui.F_BankInfoAR..Create
+Gui.F_BankInfoAR..Caption("Seleccion de Informacion Bancaria")
+Gui.F_BankInfoAR..Size(7545,4920)
+Gui.F_BankInfoAR..MinX(0)
+Gui.F_BankInfoAR..MinY(0)
+Gui.F_BankInfoAR..Position(0,0)
+Gui.F_BankInfoAR..BackColor(-2147483633)
+Gui.F_BankInfoAR..MousePointer(0)
+Gui.F_BankInfoAR..MousePointer(0)
+Gui.F_BankInfoAR..Event(UnLoad,F_BankInfo_UnLoad)
+Gui.F_BankInfoAR.lblCUENTA.Create(Label,"CUENTA",True,1935,255,0,855,1740,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.lblABBA.Create(Label,"ABA",True,1935,255,0,855,3090,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.lblCLABE.Create(Label,"CLABE",True,1935,255,0,855,2160,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.lblSWIFT.Create(Label,"SWIFT",True,1935,255,0,855,2625,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.txtCuenta.Create(TextBox,"",True,2595,300,0,3645,1650,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtCuenta.NumericOnly(2)
+Gui.F_BankInfoAR.txtCuenta.MaxLength(10)
+Gui.F_BankInfoAR.txtABBA.Create(TextBox,"",True,2595,300,0,3645,3030,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtABBA.MaxLength(9)
+Gui.F_BankInfoAR.txtSwift.Create(TextBox,"",True,2595,300,0,3645,2565,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtSwift.MaxLength(11)
+Gui.F_BankInfoAR.txtClabe.Create(TextBox,"",True,2595,300,0,3645,2085,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtClabe.NumericOnly(2)
+Gui.F_BankInfoAR.txtClabe.MaxLength(18)
+Gui.F_BankInfoAR.cmdSaveBankInfoAR.Create(Button)
+Gui.F_BankInfoAR.cmdSaveBankInfoAR.Size(1650,570)
+Gui.F_BankInfoAR.cmdSaveBankInfoAR.Position(5370,3510)
+Gui.F_BankInfoAR.cmdSaveBankInfoAR.Caption("GUARDAR BANCO")
+Gui.F_BankInfoAR.cmdSaveBankInfoAR.Event(Click,cmdSaveBankInfoAR_Click)
+Gui.F_BankInfoAR.lbl2.Create(Label,"DESCRIPCION",True,1935,255,0,855,1335,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.txtDesc.Create(TextBox,"",True,2595,300,0,3645,1230,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtDesc.MaxLength(50)
+Gui.F_BankInfoAR.lbl1.Create(Label,"Selecciona Informacion Bancaria",True,4230,255,0,915,465,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.lblBanco.Create(Label,"BANCO",True,1935,255,0,855,915,True,0,"Arial",10,-2147483633,0)
+Gui.F_BankInfoAR.txtBanco.Create(TextBox,"",True,2595,300,0,3645,825,True,0,"Arial",8,-2147483643,1)
+Gui.F_BankInfoAR.txtBanco.MaxLength(50)
+Gui.F_BankInfoAR.txtBanco.Locked(True)
+Gui.F_BankInfoAR.cmdOpBanco.Create(Button)
+Gui.F_BankInfoAR.cmdOpBanco.Size(375,375)
+Gui.F_BankInfoAR.cmdOpBanco.Position(6375,750)
+Gui.F_BankInfoAR.cmdOpBanco.Caption("^")
+Gui.F_BankInfoAR.cmdOpBanco.Event(Click,cmdBNat_Click)
+Gui.F_PagosAsk..Create
+Gui.F_PagosAsk..Size(6405,2190)
+Gui.F_PagosAsk..MinX(0)
+Gui.F_PagosAsk..MinY(0)
+Gui.F_PagosAsk..Position(0,0)
+Gui.F_PagosAsk..BackColor(-2147483633)
+Gui.F_PagosAsk..MousePointer(0)
+Gui.F_PagosAsk..Event(UnLoad,F_BankInfo_UnLoad)
+Gui.F_PagosAsk..Caption("SAT Complemento de Pagos")
+Gui.F_PagosAsk.lbl1.Create(Label,"Desea Generar Recibo Electronico de Pagos",True,5955,630,0,120,90,True,2,"Arial",8,-2147483633,0)
+Gui.F_PagosAsk.cmdGenerate.Create(Button)
+Gui.F_PagosAsk.cmdGenerate.Size(855,375)
+Gui.F_PagosAsk.cmdGenerate.Position(1590,855)
+Gui.F_PagosAsk.cmdGenerate.Caption("SI")
+Gui.F_PagosAsk.cmdGenerate.FontSize(10)
+Gui.F_PagosAsk.cmdGenerate.Event(Click,cmdGenerate_Click)
+Gui.F_PagosAsk.cmdGenerate.DisableOnClick(11)
+Gui.F_PagosAsk.cmdNoGenerate.Create(Button)
+Gui.F_PagosAsk.cmdNoGenerate.Size(855,375)
+Gui.F_PagosAsk.cmdNoGenerate.Position(3360,870)
+Gui.F_PagosAsk.cmdNoGenerate.Caption("NO")
+Gui.F_PagosAsk.cmdNoGenerate.FontSize(10)
+Gui.F_PagosAsk.cmdNoGenerate.Event(Click,cmdNoGenerate_Click)
+Gui.F_PagosAsk.cmdNoGenerate.DisableOnClick(11)
+Gui.F_PagosCancel..Create
+Gui.F_PagosCancel..Caption("Anular pago REP")
+Gui.F_PagosCancel..Size(8715,4560)
+Gui.F_PagosCancel..MinX(0)
+Gui.F_PagosCancel..MinY(0)
+Gui.F_PagosCancel..Position(0,0)
+Gui.F_PagosCancel..BackColor(-2147483633)
+Gui.F_PagosCancel..MousePointer(0)
+Gui.F_PagosCancel..Event(UnLoad,F_PagosCancel_Unload)
+Gui.F_PagosCancel.cmdPagosBrowser.Create(Button)
+Gui.F_PagosCancel.cmdPagosBrowser.Size(375,375)
+Gui.F_PagosCancel.cmdPagosBrowser.Position(5385,975)
+Gui.F_PagosCancel.cmdPagosBrowser.Caption("^")
+Gui.F_PagosCancel.cmdPagosBrowser.Event(Click,cmdPagosBrowser_Click)
+Gui.F_PagosCancel.lbl1.Create(Label,"Seleccione el Pago",True,2700,255,0,2685,585,True,0,"Arial",10,-2147483633,0)
+Gui.F_PagosCancel.txtIDPagos.Create(TextBox,"",True,1995,300,0,2775,1020,True,0,"Arial",8,-2147483643,1)
+Gui.F_PagosCancel.txtIDPagos.Locked(True)
+Gui.F_PagosCancel.lbl2.Create(Label,"Facturas: ",True,1935,255,0,120,1755,True,0,"Arial",8,-2147483633,0)
+Gui.F_PagosCancel.lbl3.Create(Label,"Monto",True,1935,255,0,195,2490,True,0,"Arial",8,-2147483633,0)
+Gui.F_PagosCancel.txtMonto.Create(TextBox,"",True,1995,300,0,2790,2385,True,0,"Arial",8,-2147483643,1)
+Gui.F_PagosCancel.txtMonto.Locked(True)
+Gui.F_PagosCancel.cmdAnularPago.Create(Button)
+Gui.F_PagosCancel.cmdAnularPago.Size(2505,540)
+Gui.F_PagosCancel.cmdAnularPago.Position(4545,2970)
+Gui.F_PagosCancel.cmdAnularPago.Caption("Anular Pago")
+Gui.F_PagosCancel.cmdAnularPago.Event(Click,cmdAnularPago_Click)
+Gui.F_PagosCancel.cmdAnularPago.DisableOnClick(11)
+Gui.F_PagosCancel.txtInvoices.Create(TextBox,"",True,4575,300,0,2775,1695,True,0,"Arial",8,-2147483643,1)
+Gui.F_PagosCancel.txtInvoices.Locked(True)
+Gui.F_ErrorDash..Create
+Gui.F_ErrorDash..Caption("Dashboard Errores en Complemento de Pagos")
+Gui.F_ErrorDash..Size(19635,12855)
+Gui.F_ErrorDash..MinX(0)
+Gui.F_ErrorDash..MinY(0)
+Gui.F_ErrorDash..Position(0,0)
+Gui.F_ErrorDash..BackColor(-2147483633)
+Gui.F_ErrorDash..MousePointer(0)
+Gui.F_ErrorDash..Event(UnLoad,F_ErrorDash_UnLoad1)
+Gui.F_ErrorDash.lbl1.Create(Label,"Lista de Errores en Complemento de Pagos",True,9255,255,0,1170,450,True,0,"Arial",10,-2147483633,0)
+Gui.F_ErrorDash.GsGridErrores.Create(GsGridControl)
+Gui.F_ErrorDash.GsGridErrores.Size(19065,11385)
+Gui.F_ErrorDash.GsGridErrores.Position(165,765)
+Gui.F_BancosCheck..Create
+Gui.F_BancosCheck..Caption("Tipo de Banco")
+Gui.F_BancosCheck..Size(8340,3180)
+Gui.F_BancosCheck..MinX(0)
+Gui.F_BancosCheck..MinY(0)
+Gui.F_BancosCheck..Position(0,0)
+Gui.F_BancosCheck..BackColor(-2147483633)
+Gui.F_BancosCheck..MousePointer(0)
+Gui.F_BancosCheck..Event(UnLoad,F_BankInfo_UnLoad)
+Gui.F_BancosCheck.cmdYES.Create(Button)
+Gui.F_BancosCheck.cmdYES.Size(915,465)
+Gui.F_BancosCheck.cmdYES.Position(1170,1830)
+Gui.F_BancosCheck.cmdYES.Caption("SI")
+Gui.F_BancosCheck.cmdYES.Event(Click,cmdBankInfoYES_Click)
+Gui.F_BancosCheck.cmdYES.FontSize(10)
+Gui.F_BancosCheck.cmdNO.Create(Button)
+Gui.F_BancosCheck.cmdNO.Size(915,465)
+Gui.F_BancosCheck.cmdNO.Position(4965,1800)
+Gui.F_BancosCheck.cmdNO.Caption("NO")
+Gui.F_BancosCheck.cmdNO.Event(Click,cmdBankInfoNO_Click)
+Gui.F_BancosCheck.cmdNO.FontSize(10)
+Gui.F_BancosCheck.lbl1.Create(Label,"Banco configurado como predeterminado para cliente:",True,5790,330,0,1365,315,True,0,"Arial",10,-2147483633,0)
+Gui.F_BancosCheck.txtBANKINFO.Create(TextBox,"",True,7290,300,0,345,720,True,0,"Arial",8,-2147483643,1)
+Gui.F_BancosCheck.txtBANKINFO.Locked(True)
+Gui.F_BancosCheck.lbl2.Create(Label,"Desea cambiar el banco o agregar nuevo banco?",True,4155,255,0,1365,1380,True,0,"Arial",10,-2147483633,0)
+Gui.F_BancosCheck.lbl2.BorderStyle(1)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sCustomer.Declare
+v.Global.sCustomer2.Declare
+v.Global.sBatchNum.Declare
+V.Global.sID_Pago.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+v.Local.sSQL.Declare
+v.Local.sTerminal.Declare
+V.Local.sBanco.Declare
+v.Local.sBatchCheck.Declare
+v.Local.sBancoCheck.Declare
+v.Local.sTerminalCheck.Declare
+v.Local.sUserCheck.Declare
+
+'THIS PROJECT IS CREATED FOR THE MEXICAN GOVERNMENT FOR PAYMENT RECECIPTS, 
+'DATA IS POPULATED FROM 1 FORM LOCATED ON CUSTOMER MASTER OPTIONS SCRIPT 3, 
+'ALSO AFTER POSING AR BATCH LOOK AT BI_COMB_JE_AUDIT TABLE TO TAKE INFORMATION OF BATCH AND INVOICE AND ADD IT TO CUSTOM TABLE ALONG WITH BANK INFORMATION FOR 3RD PARTY SOFTWARE CAN GENERATE XML FILE FOR DIGITAL TAX RECEIPT
+
+F.ODBC.Connection!conx.OpenCompanyConnection
+
+'''''INFORMACION BANCARIA CUSTOMER MASTER OPTIONS''''''
+F.Intrinsic.Control.If(V.Caller.Hook,=,14350)
+	
+	V.Passed.Global.Set(V.Passed.000002)
+	v.Global.sCustomer.Set(V.Passed.000002)
+
+''Customer Master Pre Save
+'f.Intrinsic.Control.ElseIf(V.Caller.Hook,=,14384)
+'	F.Intrinsic.Control.If(v.Passed.000021.Trim,=,"XEXX010101000")
+'		'IF RFC XEXX010101000 THEN REQUEST TO FILL COMERCIO EXTERIOR INFO
+'		f.Intrinsic.Control.CallSub(PagosCheckRFC)
+'	f.Intrinsic.Control.EndIf
+	
+'Customer Master Options populate hook 14341
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,14341)
+	V.Passed.000185.Set("CFDI Pagos")
+	
+'Customer Master Options  script 3 hook 14344
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,14344)	
+	F.Intrinsic.Control.CallSub(F_BankInfo_Load)
+	
+'''''INFORMACION BANCARIA AR BATCH NEW''''''	
+'Accounts Receivable > Transactions > AR Batches > New > POPULATE 
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,37901)
+	V.Passed.000036.Set("CFDI Pagos")
+	v.Global.sBatchNum.Set(v.Passed.000001)
+'Accounts Receivable > Transactions > AR Batches > New > SCRIPT 3
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,37904)
+	f.Intrinsic.Control.CallSub(F_BankInfo_LoadAR_BATCH)
+	V.Passed.Global.Set(V.Passed.000007)
+	v.Global.sCustomer2.Set(V.Passed.000007)
+
+'Accounts Receivable > Transactions > AR Batches > New > PRE OK
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,37905)
+	v.Global.sCustomer2.Set(V.Passed.000007)
+	
+
+	F.Intrinsic.String.Build("select CUSTOMER+BANCO+DESCRIPCION+CUENTA from CFDI_COMPAGOS_BANCO where customer = '{0}'",v.Global.sCustomer2,v.Local.sSQL)
+	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,V.Local.sBancoCheck)
+		
+	gui.F_BancosCheck.txtBANKINFO.Text(v.Local.sBancoCheck)
+	gui.F_BankInfoAR..Show
+	
+	
+	
+	
+
+
+
+'''''GENERAR COMPLEMENTO DE PAGOS''''''
+F.Intrinsic.Control.ElseIf(v.Caller.Hook,=,16090)
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+	F.Intrinsic.Control.If(v.Passed.009001,=,"000817")
+	v.Local.sTerminal.Set(V.Passed.BIP_Terminal)
+'	f.Global.Security.GetUserId()
+	'SAVE TERMINAL NUMBER IN A CUSTOM TABLE
+		F.Intrinsic.String.Build("select count(Terminal) from GAB_5016_CFDI_PAGOS where usr = '{0}'",v.Caller.User,V.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,V.Local.sTerminalCheck)
+		'IF STATEMENT TO VEIRFY IF THERE IS A TERMINAL LOCATED ON GAB_5016_CFDI_PAGOS
+		F.Intrinsic.Control.If(V.Local.sTerminalCheck,=,0)
+			F.Intrinsic.String.Build("INSERT INTO GAB_5016_CFDI_PAGOS(TERMINAL,USR) VALUES ('{0}','{1}')",V.Local.sTerminal,V.Caller.User,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("select Terminal From GAB_5016_CFDI_PAGOS where usr = '{0}'",V.Caller.User,V.Local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,V.Local.sUserCheck.Trim)
+			F.Intrinsic.Control.If(V.Local.sUserCheck.Trim,=,V.Local.sTerminal)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("UPDATE GAB_5016_CFDI_PAGOS SET TERMINAL = '{0}', USR = '{1}'",V.Local.sTerminal,V.Caller.User,v.Local.sSQL)
+				F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			F.Intrinsic.Control.EndIf		
+		F.Intrinsic.Control.EndIf
+
+		
+		
+		F.ODBC.Connection!conx.ExecuteAndReturn("select RFC from CFDI_C_BANCOS where C_BANCO = '999'",v.Local.sBanco)
+		f.Intrinsic.Control.If(v.Local.sBanco,=,"")
+			F.Intrinsic.UI.Msgbox("La informacion de la tabla CFDI_C_BANCOS esta configurada como '999' Banco Extranjero, Favor de agregar la informacion dentro de la tabla para continuar con el proceso")
+		F.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.String.Build("select distinct batch_num from BI_COMB_JE_AUDIT where RPTID = '000817' AND trmnl = '{0}'",v.Local.sTerminal,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Global.sBatchNum)
+'		f.Intrinsic.UI.Msgbox(v.Global.sBatchNum)
+		f.Intrinsic.String.Build("select distinct count(batch_num) from BI_COMB_JE_AUDIT WHERE RPTID = '000817' AND trmnl = '{0}' and batch_num not like 'R%' and batch_num not like 'G%' and batch_num not like 'H%'",v.Local.sTerminal,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sBatchCheck)
+		
+		f.Intrinsic.Control.If(v.Local.sBatchCheck,=,"0")
+			Gui.F_PagosAsk..Show
+		F.Intrinsic.Control.Else
+			f.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+		f.Intrinsic.Control.EndIf
+		
+'		f.Intrinsic.String.Build("select COUNT(id_pagos) from CFDI_COMPAGOS_PAGO where ID_PAGOS = {0}",v.Global.sBatchNum,v.Local.sSQL)
+'		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sBatchCheck2)
+'		
+'		f.Intrinsic.Control.If(v.Local.sBatchCheck2,<>,"0")
+'			f.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+'		f.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndIf
+'''''ANULAR PAGO MENU''''''	
+f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"P")
+		gui.F_PagosCancel..Show
+''''Dashboard Errores'''''
+f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"ECP")
+	f.Intrinsic.Control.CallSub(ErrorDashboardLoad)
+
+f.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+'''''INFORMACION BANCARIA CUSTOMER MASTER OPTIONS''''''
+Program.Sub.cmdBNat_Click.Start
+v.Local.sRet.Declare(string)
+v.Local.sTitles.Declare(string)
+v.Local.iWidths.Declare(long)
+'FROM A CUSTOM BROWSER GET THE BANK INFORMATION(BANK NAME, BUSSINESS NAME) AND STORE IT INTO 2 TEXT BOXES
+F.Intrinsic.String.Split("BANCO*!*DESCRIPCION*!*RAZON_SOCIAL","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("200*!*800*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Selecciona Banco de Catalago del SAT","CONX","select C_BANCO,DESCRIPCION,RAZON_SOCIAL from CFDI_C_BANCOS",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+ F.Intrinsic.Control.Else
+ F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+ 	Gui.F_BankInfo.txtNomBanco.Text(V.Local.sRet(0).Trim)
+ 	gui.F_BankInfo.txtDesc.Text(V.Local.sRet(1).Trim)
+ 	gui.F_BankInfoAR.txtBanco.Text(V.Local.sRet(0).Trim)
+ 	gui.F_BankInfoAR.txtDesc.Text(V.Local.sRet(1).Trim)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdBNat_Click.End
+
+Program.Sub.PagosCheckRFC.Start
+'v.Local.sSQL.Declare
+'v.Local.sCheckRFC.Declare
+'v.Local.sOrderNo.Declare
+
+'v.Local.sOrderNo.Set(v.Passed.000003.String)
+'f.Intrinsic.String.LPad(v.Local.sOrderNo,"0",7,v.Local.sOrderNo)
+
+'f.Intrinsic.String.Build("select count(order_no) from CFDI_COMEXT_OE_SO where order_no = '{0}'",v.Local.sOrderNo,v.Local.sSQL)
+'F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sCheckRFC)
+
+'f.Intrinsic.Control.If(v.Local.sCheckRFC,=,0)
+'	F.Intrinsic.UI.Msgbox("Usted a capturado un RFC generico de exportacion XEXX010101000, es obligatorio capturar informacion del banco ordenante extranjero para realizar el complemento de pagos")
+'	V.Passed.777777.Set(1)
+'	gui.F_BankInfo..Show
+'f.Intrinsic.Control.EndIf
+Program.Sub.PagosCheckRFC.End
+
+Program.Sub.cmdSaveBanco_Click.Start
+V.Local.sSQL.Declare
+v.Local.sBatch.Declare
+v.Local.sCustomer.Declare
+
+
+f.Intrinsic.UI.Msgbox(V.Passed.Global.Trim)
+'SAVE INFORMATION FROM FORM INTO CUSTOM TABLE CFDI_COMPAGOS_BANCO
+F.Intrinsic.String.Build("SELECT * FROM CFDI_COMPAGOS_BANCO WHERE CUSTOMER = '{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+F.Intrinsic.Control.If(v.ODBC.CONX!RST.EOF,=,True)
+	F.ODBC.CONX!RST.AddNew
+	F.ODBC.CONX!RST.Set!CUSTOMER(V.Passed.Global.Trim)
+F.Intrinsic.Control.EndIf
+F.ODBC.CONX!RST.Set!BANCO(V.Screen.F_BankInfo!txtNomBanco.Text)
+F.ODBC.CONX!RST.Set!DESCRIPCION(V.Screen.F_BankInfo!txtDesc.Text)
+F.ODBC.CONX!RST.Set!CUENTA(V.Screen.F_BankInfo!txtCuenta.Text)
+F.ODBC.CONX!RST.Set!ABBA(V.Screen.F_BankInfo!txtABBA.Text)
+F.ODBC.CONX!RST.Set!SWIFT(V.Screen.F_BankInfo!txtSwift.Text)
+F.ODBC.CONX!RST.Set!CLABE(V.Screen.F_BankInfo!txtClabe.Text)
+F.ODBC.CONX!RST.Update
+F.Intrinsic.UI.Msgbox("INFORMACION BANCARIA GUARDADA")
+F.ODBC.CONX!RST.Close
+
+Program.Sub.cmdSaveBanco_Click.End
+
+Program.Sub.cmdDELETE_Click.Start
+V.Local.sSQL.Declare
+V.Local.sBank.Declare
+v.Local.sDesc.Declare
+
+v.Local.sBank.Set(v.Screen.F_BankInfo!txtNomBanco.Text)
+
+
+F.Intrinsic.String.Build("delete FROM CFDI_COMPAGOS_BANCO2 WHERE CUSTOMER = '{0}' AND BANCO = '{1}'",V.Passed.Global,V.Local.sBank,v.Local.sSQL)
+F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+f.Intrinsic.UI.Msgbox("INFROMACION BANCARIA BORRADA")
+
+
+GUI.F_BankInfo.txtNomBanco.Text("")
+gui.F_BankInfo.txtDesc.Text("")
+GUI.F_BankInfo.txtCuenta.Text("")
+gui.F_BankInfo.txtABBA.Text("")
+GUI.F_BankInfo.txtSwift.Text("")
+gui.F_BankInfo.txtClabe.Text("")
+
+Program.Sub.cmdDELETE_Click.End
+
+Program.Sub.F_BankInfo_Load.Start
+V.Local.sSQL.Declare(String)
+
+'Load Existing Data into Form searching from custom table CFDI_COMPAGOS_BANCO
+F.Intrinsic.String.Concat("select * from CFDI_COMPAGOS_BANCO WHERE CUSTOMER ='",V.Passed.Global,"'",V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!CUSTOMER,=,"")
+		Gui.F_BankInfo.txtNomBanco.Value(1)
+		gui.F_BankInfo.txtDesc.Value(2)
+		Gui.F_BankInfo.txtCuenta.Value(3)
+		Gui.F_BankInfo.txtClabe.Value(4)
+		Gui.F_BankInfo.txtSwift.Value(5)
+		Gui.F_BankInfo.txtABBA.Value(6)
+	F.Intrinsic.Control.EndIf
+	GUI.F_BankInfo.txtOpBanco.Text(v.ODBC.conx!rstLoad.FieldValTrim!DESCRIPCION)
+	Gui.F_BankInfo.txtNomBanco.Text(V.ODBC.conx!rstLoad.FieldValTrim!BANCO)
+	gui.F_BankInfo.txtDesc.Text(v.ODBC.conx!rstLoad.FieldValTrim!DESCRIPCION)
+	Gui.F_BankInfo.txtCuenta.Text(V.ODBC.conx!rstLoad.FieldValTrim!CUENTA)
+	Gui.F_BankInfo.txtClabe.Text(V.ODBC.conx!rstLoad.FieldValTrim!CLABE)
+	Gui.F_BankInfo.txtSwift.Text(V.ODBC.conx!rstLoad.FieldValTrim!SWIFT)
+	Gui.F_BankInfo.txtABBA.Text(V.ODBC.conx!rstLoad.FieldValTrim!ABBA)
+F.Intrinsic.Control.EndIf
+Gui.F_BankInfo..Show
+Program.Sub.F_BankInfo_Load.End
+
+Program.Sub.F_BankInfo_LoadAR_BATCH.Start
+V.Local.sCustomer.Declare
+V.Local.sSQL.Declare
+
+v.Local.sCustomer.Set(v.Passed.000007.Trim)
+f.Intrinsic.UI.Msgbox(v.Local.sCustomer)
+
+'Load Existing Data into Form searching from custom table CFDI_COMPAGOS_BANCO
+F.Intrinsic.String.Concat("select * from CFDI_COMPAGOS_BANCO WHERE CUSTOMER ='",V.Local.sCustomer,"'",V.Local.sSQL)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,"False")
+	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.FieldValTrim!CUSTOMER,=,"")
+		Gui.F_BankInfoAR.txtBanco.Value(1)
+		gui.F_BankInfoAR.txtDesc.Value(2)
+		Gui.F_BankInfoAR.txtCuenta.Value(3)
+		Gui.F_BankInfoAR.txtClabe.Value(4)
+		Gui.F_BankInfoAR.txtSwift.Value(5)
+		Gui.F_BankInfoAR.txtABBA.Value(6)
+	F.Intrinsic.Control.EndIf
+	Gui.F_BankInfoAR.txtBanco.Text(V.ODBC.conx!rstLoad.FieldValTrim!BANCO)
+	gui.F_BankInfoAR.txtDesc.Text(v.ODBC.conx!rstLoad.FieldValTrim!DESCRIPCION)
+	Gui.F_BankInfoAR.txtCuenta.Text(V.ODBC.conx!rstLoad.FieldValTrim!CUENTA)
+	Gui.F_BankInfoAR.txtClabe.Text(V.ODBC.conx!rstLoad.FieldValTrim!CLABE)
+	Gui.F_BankInfoAR.txtSwift.Text(V.ODBC.conx!rstLoad.FieldValTrim!SWIFT)
+	Gui.F_BankInfoAR.txtABBA.Text(V.ODBC.conx!rstLoad.FieldValTrim!ABBA)
+F.Intrinsic.Control.EndIf
+Gui.F_BankInfoAR..Show
+Program.Sub.F_BankInfo_LoadAR_BATCH.End
+
+Program.Sub.cmdSaveBankInfoAR_Click.Start
+V.Local.sSQL.Declare
+v.Local.sBatch.Declare
+v.Local.sCustomer.Declare
+
+
+f.Intrinsic.UI.Msgbox(V.Passed.Global.Trim)
+'SAVE INFORMATION FROM FORM INTO CUSTOM TABLE CFDI_COMPAGOS_BANCO
+F.Intrinsic.String.Build("SELECT * FROM CFDI_COMPAGOS_BANCO WHERE CUSTOMER = '{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+F.ODBC.Connection!CONX.OpenLocalRecordsetRW("RST",v.Local.sSQL)
+F.Intrinsic.Control.If(v.ODBC.CONX!RST.EOF,=,True)
+	F.ODBC.CONX!RST.AddNew
+	F.ODBC.CONX!RST.Set!CUSTOMER(V.Passed.Global.Trim)
+F.Intrinsic.Control.EndIf
+F.ODBC.CONX!RST.Set!BANCO(V.Screen.F_BankInfoAR!txtBanco.Text)
+F.ODBC.CONX!RST.Set!DESCRIPCION(V.Screen.F_BankInfoAR!txtDesc.Text)
+F.ODBC.CONX!RST.Set!CUENTA(V.Screen.F_BankInfoAR!txtCuenta.Text)
+F.ODBC.CONX!RST.Set!ABBA(V.Screen.F_BankInfoAR!txtABBA.Text)
+F.ODBC.CONX!RST.Set!SWIFT(V.Screen.F_BankInfoAR!txtSwift.Text)
+F.ODBC.CONX!RST.Set!CLABE(V.Screen.F_BankInfoAR!txtClabe.Text)
+F.ODBC.CONX!RST.Update
+F.Intrinsic.UI.Msgbox("INFORMACION BANCARIA GUARDADA")
+F.ODBC.CONX!RST.Close
+
+Program.Sub.cmdSaveBankInfoAR_Click.End
+
+'''MULTIPLES PAGOS'''
+Program.Sub.cmdNewBank_Click.Start
+gui.F_BankInfo.txtOpBanco.Text("")
+GUI.F_BankInfo.txtNomBanco.Text("")
+gui.F_BankInfo.txtDesc.Text("")
+GUI.F_BankInfo.txtCuenta.Text("")
+gui.F_BankInfo.txtABBA.Text("")
+GUI.F_BankInfo.txtSwift.Text("")
+gui.F_BankInfo.txtClabe.Text("")
+Program.Sub.cmdNewBank_Click.End
+
+Program.Sub.cmdOpBanco_Click.Start
+V.Local.BankCheck.Declare
+V.Local.sMessage.Declare
+v.Local.sRet.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare(long)
+V.Local.sSQL.Declare
+
+
+
+f.Intrinsic.String.Build("select COUNT(BANCO) from CFDI_COMPAGOS_BANCO2 WHERE CUSTOMER = '{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,v.Local.BankCheck)
+
+'BROWSER FROM CFDI_COMPAGOS_BANCO2 WHERE ALL BANKS ARE SAVED
+f.Intrinsic.Control.If(v.Local.BankCheck,=,"0")
+'IF THERE IS NO DATA SELECT OPTION TO SAVE INFORMATION
+	F.Intrinsic.String.Build("NO EXISTE CUENTA BANCARIA PARA CLIENTE {0} FAVOR DE INGRESAR INFORMACION NUEVA Y SELECCIONAR GUARDAR BANCO",V.Passed.Global.Trim,v.Local.sMessage)
+	f.Intrinsic.UI.Msgbox(v.Local.sMessage)
+f.Intrinsic.Control.Else
+'FROM A CUSTOM BROWSER GET THE BANK INFORMATION FROM CATALOGS
+	F.Intrinsic.String.Split("BANCO*!*DESCRIPCION*!*CUENTA*!*ABBA*!*SWIFT*!*CLABE","*!*",v.local.sTitles)
+	F.Intrinsic.String.Split("500*!*800*!*800*!*800*!*800*!*800","*!*",v.local.iWidths)
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.String.Build("select BANCO,DESCRIPCION,CUENTA,ABBA,SWIFT,CLABE from CFDI_COMPAGOS_BANCO2 WHERE CUSTOMER = '{0}'",V.Passed.Global.Trim,V.Local.sSQL)
+	F.Intrinsic.String.Build("Selecciona Bancos Disponibles para Cliente {0}",V.Passed.Global.Trim,v.Local.sMessage)
+	F.Intrinsic.UI.Browser(v.Local.sMessage,"CONX",V.Local.sSQL,v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+	F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+	 F.Intrinsic.Control.Else
+	 F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	 	GUI.F_BankInfo.txtOpBanco.Text(v.Local.sRet(1).Trim)
+		GUI.F_BankInfo.txtNomBanco.Text(V.Local.sRet(0).Trim)
+		GUI.F_BankInfo.txtDesc.Text(V.Local.sRet(1).Trim)
+		GUI.F_BankInfo.txtCuenta.Text(V.Local.sRet(2).Trim)
+		GUI.F_BankInfo.txtABBA.Text(V.Local.sRet(3).Trim)
+		GUI.F_BankInfo.txtSwift.Text(V.Local.sRet(4).Trim)
+		GUI.F_BankInfo.txtClabe.Text(V.Local.sRet(5).Trim)
+	F.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdOpBanco_Click.End
+
+Program.Sub.cmdSaveInfoBanco2_Click.Start
+V.Local.sSQL.Declare(String)
+v.Local.sBANCO.Declare
+V.Local.sBANCOCheck.Declare
+
+v.Local.sBANCO.Set(V.Screen.F_BankInfo!txtNomBanco.Text)
+
+F.Intrinsic.String.Build("SELECT COUNT(BANCO) FROM CFDI_COMPAGOS_BANCO2 WHERE CUSTOMER = '{0}' and BANCO = '{1}'",V.Passed.Global.Trim,v.Local.sBANCO.Trim,V.Local.sSQL)
+F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,V.Local.sBANCOCheck)
+F.Intrinsic.Control.If(V.Local.sBANCOCheck,=,"0")
+	'INSERT
+	F.Intrinsic.String.Build("INSERT INTO CFDI_COMPAGOS_BANCO2(CUSTOMER,BANCO,DESCRIPCION,CUENTA,ABBA,SWIFT,CLABE) VALUES ('{0}','{1}','{2}', '{3}','{4}', '{5}','{6}')",V.Passed.Global.Trim,V.Screen.F_BankInfo!txtNomBanco.Text,V.Screen.F_BankInfo!txtDesc.Text,V.Screen.F_BankInfo!txtCuenta.Text,V.Screen.F_BankInfo!txtABBA.Text,V.Screen.F_BankInfo!txtSwift.Text,V.Screen.F_BankInfo!txtClabe.Text,V.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.UI.Msgbox("INFORMACION BANCARIA GUARDADA")
+F.Intrinsic.Control.Else
+	'UPDATE
+	F.Intrinsic.String.Build("UPDATE CFDI_COMPAGOS_BANCO2 SET BANCO = '{1}', DESCRIPCION = '{2}', CUENTA = '{3}', ABBA = '{4}', SWIFT = '{5}', CLABE = '{6}'  WHERE CUSTOMER = '{0}' AND BANCO = '{1}'",V.Passed.Global.Trim,V.Screen.F_BankInfo!txtNomBanco.Text,V.Screen.F_BankInfo!txtDesc.Text,V.Screen.F_BankInfo!txtCuenta.Text,V.Screen.F_BankInfo!txtABBA.Text,V.Screen.F_BankInfo!txtSwift.Text,V.Screen.F_BankInfo!txtClabe.Text,V.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	f.Intrinsic.UI.Msgbox("INFORMACION BANCARIA GUARDADA")
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdSaveInfoBanco2_Click.End
+
+'''''GENERAR COMPLEMENTO DE PAGOS''''''
+Program.Sub.cmdGenerate_Click.Start
+F.Intrinsic.Control.CallSub(BatchPostBankInfo)
+Program.Sub.cmdGenerate_Click.End
+
+Program.Sub.cmdNoGenerate_Click.Start
+v.Local.sSQL.Declare
+
+'CREATE LOGS ON GAB_5016_PAGOS5
+f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'COMPLEMENTO DE PAGOS NO GENERADO', 'NO SELECCIONO LA OPCION DE GENERAR COMPLEMENTO DE PAGOS')", V.Global.sBatchNum,V.Ambient.Now,v.Local.sSQL)
+F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+Program.Sub.cmdNoGenerate_Click.End
+
+Program.Sub.BatchPostBankInfo.Start
+gui.F_PagosAsk..Visible(False)
+v.Local.iCountCMM.Declare
+v.Local.iCount.Declare
+v.Local.iCountER.Declare
+v.Local.iCountCM.Declare
+v.Local.iCountP.Declare
+v.Local.iCountIPL.Declare
+v.Local.iCountIB.Declare
+v.Local.fERV.Declare
+v.Local.fAMT_CM.Declare
+v.Local.fRowCount.Declare
+v.Local.fTIPOCAMBIO.Declare
+v.Local.fMONTO.Declare
+v.Local.fTIPOCAMBIODR.Declare
+v.Local.fIMPSALDOANT.Declare
+v.Local.fIMPSALDOANT2.Declare
+v.Local.fIMPPAGADO.Declare
+v.Local.fIMPPAGADO2.Declare
+v.Local.fIMPSALDOINSOLUTO.Declare
+v.Local.fRMA.Declare
+v.Local.lFOLIO.Declare
+v.Local.lFOLIO2.Declare
+v.Local.lNUMPARCIALIDAD.Declare
+v.Local.sRowCountSA.Declare
+v.Local.sRowCount2.Declare
+v.Local.sRedisenciaFiscal.Declare
+v.Local.sRowCount.Declare
+v.Local.sREF.Declare
+v.Local.sCompFlag.Declare
+v.Local.sRet.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare
+v.Local.sCount.Declare
+v.Local.sMessage.Declare
+v.Local.sCustomer.Declare
+v.Local.sYear.Declare
+v.Local.sDay.Declare
+v.Local.sMonth.Declare
+v.local.sTerminal.Declare
+v.Local.sInvoice.Declare
+v.Local.sSQL.Declare
+v.Local.sSQL2.Declare
+v.Local.sIDPAGO.Declare
+v.Local.sFECHAPAGO.Declare
+v.Local.sFORMADEPAGO.Declare
+v.Local.sMONEDA.Declare
+v.Local.sNUMOPERACION.Declare
+v.Local.sRFCEMISORCTAORD.Declare
+v.Local.sNOMBANCOORDEXT.Declare
+v.Local.sCTAORDENANTE.Declare
+v.Local.sCTACharCount.Declare
+v.Local.sRFCEMISORCTABEN.Declare
+v.Local.sCTEBENEFICIARIO.Declare
+v.Local.sINTERNACIONAL.Declare
+v.Local.sTIMBRAR.Declare
+v.Local.sCADPAGO.Declare
+v.Local.sXML_URL.Declare
+v.Local.sID_PAGOS.Declare
+v.Local.sIDDOCUMENTO.Declare
+v.Local.sSERIE.Declare
+v.Local.sMONEDADR.Declare
+v.Local.sMETODODEPAGODR.Declare
+
+'THIS SUBRUTINE IS LAUNCHED AFTER THE AR BATCH POST(REPORT ID 817) DATA IS POPULATED USING THE BI_COMB_JE_AUDIT TABLE JOINING INTO TWO TABLES CFDI_COMPAGOS_PAGO HOLDS THE PAYMENT INFORMATION AND CFDI_COMPAGOS_DOCREL HOLDS THE DOCUMENT INFORMATION FOR THE PAYMENT.
+
+
+
+'SELECT BATCH NUM FROM BI_COMB_JE_AUDIT TABLE AND COMPARE IT TO AR_OPEN_ITEMS
+F.Intrinsic.String.Build("SELECT TERMINAL FROM GAB_5016_CFDI_PAGOS where USR = '{0}'",v.Caller.User,V.Local.sSQL)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,v.Local.sTerminal)
+			'review bank information from table CFDI_COMPAGOS_BANCO
+			F.Intrinsic.String.Build("SELECT DISTINCT B.CUSTOMER AS CUSTOMER from BI_COMB_JE_AUDIT A INNER JOIN AR_OPEN_ITEMS B ON A.BATCH_NUM = B.BATCH_NUM WHERE A.RPTID = '000817' AND A.TRMNL = '{0}'",V.Local.sTerminal,v.Local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sCustomer.Trim)
+			F.Intrinsic.String.Build("select Count(*) FROM CFDI_COMPAGOS_BANCO  WHERE customer = '{0}'",V.Local.sCustomer.Trim,v.Local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRowCount)
+'			f.Intrinsic.Control.If(v.Local.sRowCount,=,"0")
+'				f.Intrinsic.String.Build("Favor de llenar la Informacion Bancaria del Cliente {0} en Cuentas por Cobrar > Archivo > Clientes > Abrir > Opciones > CFDI Pagos",V.Local.sCustomer,v.Local.sMessage)
+'				F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'			'CREATE LOGS ON GAB_5016_PAGOS5
+'				F.Intrinsic.String.Build("SELECT DISTINCT BATCH_NUM FROM BI_COMB_JE_AUDIT WHERE RPTID = '000817' AND TRMNL = '{0}'",V.Local.sTerminal,v.Local.sSQL)
+'				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,V.Local.sID_PAGOS.Trim)
+'				f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION BANCARIA', '{2}')", V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+'				F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'				f.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+'			F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.String.Build("SELECT DISTINCT A.TRMNL,A.RPTID,A.BATCH_NUM,B.INVOICE FROM BI_COMB_JE_AUDIT A INNER JOIN AR_OPEN_ITEMS B ON A.BATCH_NUM = B.BATCH_NUM WHERE RPTID = '000817' AND TRMNL = '{0}' ORDER BY TRMNL",v.Local.sTerminal,v.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("CompPag_Factura_DT", "CONX", v.Local.sSQL)
+
+F.Intrinsic.Control.For(V.Local.iCountP,0,V.DataTable.CompPag_Factura_DT.RowCount--,1)
+		V.local.sInvoice.Set(v.DataTable.CompPag_Factura_DT(v.Local.ICountP).INVOICE!FieldValString)
+		F.Intrinsic.String.Build("SELECT NUMPARCIALIDAD FROM GAB_5016_CFDI_PAGOS3 WHERE INVOICE = '{0}'",V.local.sInvoice, v.Local.sSQL)
+		F.ODBC.Connection!CONX.ExecuteAndReturn(v.Local.sSQL,v.Local.lNUMPARCIALIDAD)	
+		F.Intrinsic.String.Build("select Count(NUMPARCIALIDAD) FROM GAB_5016_CFDI_PAGOS3  WHERE INVOICE = '{0}'",v.local.sInvoice.Trim,v.local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sCount)
+		'IF THERE IS NO EXISTING IDDOCUMENTO THEN SET 1, ELSE ADD THE NUMPARCIALIDAD +1
+		F.Intrinsic.Control.If(v.Local.sCount,=,"0")
+			v.Local.lNUMPARCIALIDAD.Set("1")
+			F.Intrinsic.String.Build("INSERT INTO GAB_5016_CFDI_PAGOS3(INVOICE,NUMPARCIALIDAD) VALUES ('{0}', '{1}')",v.local.sInvoice,v.Local.lNUMPARCIALIDAD,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(v.Local.lNUMPARCIALIDAD,1,v.Local.lNUMPARCIALIDAD)
+			F.Intrinsic.String.Build("UPDATE GAB_5016_CFDI_PAGOS3 SET NUMPARCIALIDAD = '{1}' WHERE INVOICE = '{0}'",v.local.sInvoice,v.Local.lNUMPARCIALIDAD,V.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.ICountP)
+f.Data.DataTable.Close("CompPag_Factura_DT")
+
+'DATA TABLE FOR CFDI_COMPAGOS_DOCREL(IN THIS TABLE IT WILL HOLD INVOICE #,GOV DOC ID, PAY SERIAL NUM, POST ID, CURRENCY, EXCHANGE RATE, EXCHANGE CURRENCY, PAYMENT METHOD, PREV AMT, AMT PAID, OUTSTANDING AMT)
+F.Intrinsic.String.Build("SELECT DISTINCT B.BATCH_NUM as BATCH_NUM,B.INVOICE as INVOICE,C.ORDER_CURRENCY,C.EXCHANGE_RATE_FO_TC as EXCHANGE_RATE_FO_TC,SUBSTRING(C.USER_1,1,3) as USER_1 FROM BI_COMB_JE_AUDIT A INNER JOIN AR_OPEN_ITEMS B ON A.BATCH_NUM = B.BATCH_NUM INNER join order_hist_head C on b.invoice = c.invoice WHERE A.RPTID = '000817' AND A.TRMNL = '{0}'",v.Local.sTerminal,v.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("CompPag_DocRel_DT", "CONX", v.Local.sSQL)
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "IDDOCUMENTO", "String")
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "IMPSALDOANT", "Float")
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "IMPPAGADO", "Float")
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "IMPSALDOANT_EXC", "Float")
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "IMPPAGADO_EXC", "Float")
+F.Data.DataTable.AddColumn("CompPag_DocRel_DT", "NUMPARCIALIDAD", "Long")
+
+
+'DICTIONARY IDDOCUMENTO
+F.Data.Dictionary.CreateFromSQL("IDDOCUMENTO_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,UUID_CFDI as IDDOCUMENTO FROM FACTURAS")
+F.Data.Dictionary.SetDefaultReturn("IDDOCUMENTO_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "IDDOCUMENTO_Dic", "INVOICE", "IDDOCUMENTO")
+F.Data.Dictionary.Close("IDDOCUMENTO_Dic")
+
+'DICTIONARY IMPSALDOANT
+F.Data.Dictionary.CreateFromSQL("IMPSALDOANT_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,ABS(AMT_INVOICE) as IMPSALDOANT FROM AR_OPEN_ITEMS WHERE BATCH_CODE = '10'")
+F.Data.Dictionary.SetDefaultReturn("IMPSALDOANT_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "IMPSALDOANT_Dic", "INVOICE", "IMPSALDOANT")
+F.Data.Dictionary.Close("IMPSALDOANT_Dic")
+
+'DICTIONARY IMPPAGADO
+F.Data.Dictionary.CreateFromSQL("IMPPAGADO_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,ABS(AMT_INVOICE) as IMPPAGADO FROM AR_OPEN_ITEMS WHERE BATCH_CODE = '11'")
+F.Data.Dictionary.SetDefaultReturn("IMPPAGADO_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "IMPPAGADO_Dic", "INVOICE", "IMPPAGADO")
+F.Data.Dictionary.Close("IMPPAGADO_Dic")
+
+'DICTIONARY IMPSALDOANT_EXC
+F.Data.Dictionary.CreateFromSQL("IMPSALDOANT_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,ABS(EXCHANGE_AMT) as IMPSALDOANT FROM AR_OPEN_ITEMS WHERE BATCH_CODE = '10'")
+F.Data.Dictionary.SetDefaultReturn("IMPSALDOANT_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "IMPSALDOANT_Dic", "INVOICE", "IMPSALDOANT_EXC")
+F.Data.Dictionary.Close("IMPSALDOANT_Dic")
+
+'DICTIONARY IMPPAGADO_EXC
+F.Data.Dictionary.CreateFromSQL("IMPPAGADO_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,ABS(EXCHANGE_AMT) as IMPPAGADO FROM AR_OPEN_ITEMS WHERE BATCH_CODE = '11'")
+F.Data.Dictionary.SetDefaultReturn("IMPPAGADO_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "IMPPAGADO_Dic", "INVOICE", "IMPPAGADO_EXC")
+F.Data.Dictionary.Close("IMPPAGADO_Dic")
+'DICTIONARY NUMPARCIALIDAD
+F.Data.Dictionary.CreateFromSQL("NUMPARCIALIDAD_Dic", "CONX", "SELECT DISTINCT INVOICE as INVOICE,NUMPARCIALIDAD as NUMPARCIALIDAD FROM GAB_5016_CFDI_PAGOS3")
+F.Data.Dictionary.SetDefaultReturn("NUMPARCIALIDAD_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_DocRel_DT", "NUMPARCIALIDAD_Dic", "INVOICE", "NUMPARCIALIDAD")
+F.Data.Dictionary.Close("NUMPARCIALIDAD_Dic")
+
+'VERIFY IF FOLIO(SERIAL) IS AVAILABLE IN A CUSTOM TABLE
+F.ODBC.Connection!CONX.ExecuteAndReturn("SELECT FOLIO FROM GAB_5016_CFDI_PAGOS2",v.Local.lFOLIO)
+'IF THERE IS NO DATA ON CUSTOM TABLE THEN SET IT TO 1 AND SET AN ELSE ADD '1' TO IT
+F.Intrinsic.Control.If(v.Local.lFOLIO,=,"0")
+	v.Local.lFOLIO.Set("1")
+	F.Intrinsic.String.Build("insert into GAB_5016_CFDI_PAGOS2(folio) values  ('{0}')",v.Local.lFOLIO,v.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Math.Add(v.Local.lFOLIO,1,v.Local.lFOLIO2)
+	F.Intrinsic.String.Build("UPDATE GAB_5016_CFDI_PAGOS2 SET FOLIO = '{1}' WHERE FOLIO ='{0}'",v.Local.lFOLIO,v.Local.lFOLIO2,v.Local.sSQL)
+   F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+F.Intrinsic.Control.EndIf	
+	
+	
+		
+
+'USING A FOR LOOP TO INSERT DATA ROWS INTO CUSTOM TABLE CFDI_COMPAGOS_DOCREL(TABLE WITH RELATED DOC INFO)
+F.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.CompPag_DocRel_DT.RowCount--,1)
+	v.local.sID_PAGOS.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).BATCH_NUM!FieldValString)
+	v.local.sInvoice.Set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).INVOICE!FieldValString)
+	v.local.sIDDOCUMENTO.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).IDDOCUMENTO!FieldValString)
+	
+
+	'VERIFY IF THERE IS PENDING Credit Memo TO ADD TO PAYMENT
+	F.Intrinsic.String.Build("select Count(AMT_INVOICE) FROM AR_OPEN_ITEMS  WHERE INVOICE = '{0}' AND BATCH_CODE = '12'",v.local.sInvoice,v.Local.sSQL)
+	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sCount)
+	'if there is no credit memo than continue on next process
+	F.Intrinsic.Control.If(v.local.sCount,=,"0")
+	f.Intrinsic.Control.Else
+			
+	f.Intrinsic.String.Build("select INVOICE,Exchange_curr,ABS(AMT_INVOICE) AS AMT_INVOICE,ABS(EXCHANGE_AMT) AS EXCHANGE_AMT,REFERENCE from AR_OPEN_ITEMS where BATCH_CODE = '12' AND invoice = '{0}'",v.Local.sInvoice,v.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("CreditMemoDT", "conx", v.Local.sSQL)
+	
+'	Function.Intrinsic.Debug.InvokeDebugger
+'	Function.Intrinsic.Debug.Stop
+	
+	'VERIFY IF REFERENCE IS AVAILABLE ON CUSTOM TABLE GAB_5016_CFDI_PAGOS4(THIS TABLE CONTAINS CREDIT MEMO AMOUNT PER INVOICE AND A FLAG 'Y' IF IT HAS BEEN ADDED TO PREVIOUS AMT TO AVOID DOUBLING CREDIT MEMO)
+	F.Intrinsic.Control.For(v.Local.iCountCMM,0,v.DataTable.CreditMemoDT.RowCount--,1)
+		f.Intrinsic.Control.If(v.DataTable.CreditMemoDT(v.Local.iCountCMM).Exchange_curr!FieldValTRIM,=,"USD")
+			V.Local.fRMA.Set(v.DataTable.CreditMemoDT(v.Local.iCountCMM).EXCHANGE_AMT!FieldValFloat)
+		F.Intrinsic.Control.Else
+			V.Local.fRMA.Set(v.DataTable.CreditMemoDT(v.Local.iCountCMM).AMT_INVOICE!FieldValFloat)
+		f.Intrinsic.Control.EndIf
+'		V.Local.fRMA.Set(v.DataTable.CreditMemoDT(v.Local.iCountCMM).AMT_INVOICE!FieldValFloat)
+		v.Local.sRef.Set(v.DataTable.CreditMemoDT(v.Local.iCountCMM).REFERENCE!FieldValString)
+		F.Intrinsic.String.Build("select Count(REFERENCE) FROM GAB_5016_CFDI_PAGOS4  WHERE INVOICE = '{0}' AND REFERENCE = '{1}'",v.local.sInvoice,v.Local.sRef,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sCount)
+		F.Intrinsic.Control.If(v.local.sCount,=,"0")
+			f.Intrinsic.String.Build("INSERT INTO GAB_5016_CFDI_PAGOS4(INVOICE,AMT_CM,REFERENCE) VALUES('{0}','{1}','{2}')",v.local.sInvoice,V.Local.fRMA,v.Local.sRef,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(v.Local.iCountCMM)
+	f.Data.DataTable.Close("CreditMemoDT")
+	F.Intrinsic.Control.EndIf
+	
+'	'VERIFY IF THERE IS AN EXISTING XML_URL ON TABLE FACTURAS
+'	F.Intrinsic.Control.If(v.local.sIDDOCUMENTO,=,"")
+'		F.Intrinsic.String.Build("Factura '{0}' no contiene informacion del timbrado dentro de Global Shop. Favor de realizar el complemento de pagos por medio del portal Facturan.do",v.local.sInvoice,v.Local.sMessage)
+'		F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'		F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+	
+	'VERIFY IF THERE IS AN EXISTING XML_URL ON TABLE FACTURAS, IF THERE IS NO DATA CUT PROCESS SINCE THE DIGITAL TAX RECEIPT WAS NOT DONE IN GSS BUT IN THE 3RD PARTY PORTAL
+	F.Intrinsic.Control.If(v.local.sIDDOCUMENTO,=,"")
+		F.Intrinsic.String.Build("Factura {0} no contiene informacion del timbrado dentro de Global Shop. Favor de realizar el complemento de pagos por medio del portal Facturan.do",v.local.sInvoice,v.Local.sMessage)
+		F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+		'CREATE LOGS ON GAB_5016_PAGOS5
+		f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'TABLA FACTURAS', '{2}')", V.Local.sID_PAGOS.Trim,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+		'else continue with process of writing on data table
+
+
+		
+		'else continue with process of writing on data table
+	F.Intrinsic.Control.Else
+		v.local.sSERIE.set("R")
+		v.local.sMONEDADR.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).ORDER_CURRENCY!FieldValString)
+		v.local.fTIPOCAMBIODR.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).EXCHANGE_RATE_FO_TC!FieldValFloat)
+		v.local.sMETODODEPAGODR.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).USER_1!FieldValTrim)
+		
+		
+		'VALIDATION ON MORE THAN ONE INVOICE ON SALDOANTERIOR(PREV BAL)
+		F.Intrinsic.String.Build("select Count(batch_line) from AR_OPEN_ITEMS where invoice = '{0}' and batch_code = '10'",v.local.sInvoice,v.local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRowCountSA)
+		'check if there is more lines of batch_code '10'(multi-line) in the same invoice 
+		F.Intrinsic.Control.If(v.Local.sRowCountSA.Long,<>,1)
+			f.Intrinsic.String.Build("select SUM(AMT_INVOICE) AS IMPSALDOANT from AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_CODE = '10'", v.local.sInvoice,v.local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("select ABS(AMT_INVOICE) AS IMPSALDOANT from AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_CODE = '10'", v.local.sInvoice,v.local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+		F.Intrinsic.Control.EndIf
+		
+		
+		
+		
+		'verify if there are credit memos on the INVOICE to add to IMPSALDOANT
+		F.Intrinsic.String.Build("select Count(AMT_INVOICE) FROM AR_OPEN_ITEMS  WHERE INVOICE = '{0}' AND BATCH_CODE = '12'",v.local.sInvoice,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sCount)
+		'if there is no credit memo than continue on next process
+		F.Intrinsic.Control.If(v.local.sCount,=,"0")
+		f.Intrinsic.Control.Else		
+			f.Intrinsic.String.Build("SELECT * from GAB_5016_CFDI_PAGOS4 WHERE invoice = '{0}' AND COMP_FLAG is null",v.local.sInvoice.Trim,v.local.sSQL)
+			F.Data.DataTable.CreateFromSQL("CompPag_CreditMemo_DT", "CONX", v.Local.sSQL)
+		'remove credit memo from SALDO ANTERIOR
+			f.Intrinsic.Control.For(v.Local.iCountCM,0,v.DataTable.CompPag_CreditMemo_DT.RowCount--,1)
+			v.Local.fRowCount.Set(v.Local.fIMPSALDOANT)
+			v.Local.fAMT_CM.Set(v.DataTable.CompPag_CreditMemo_DT(v.Local.iCountCM).AMT_CM!FieldValFloat)
+			V.Local.sCompFlag.Set(v.DataTable.CompPag_CreditMemo_DT(v.Local.iCountCM).REFERENCE!FieldValString)
+			f.Intrinsic.Math.Add(v.Local.fRowCount,v.Local.fAMT_CM,v.Local.fRowCount)
+			F.Intrinsic.String.Build("update GAB_5016_CFDI_PAGOS4 set COMP_FLAG  = 'Y' WHERE REFERENCE = '{0}'",V.Local.sCompFlag,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+			f.Intrinsic.Control.Next(v.Local.iCountCM)
+			f.Data.DataTable.Close("CompPag_CreditMemo_DT")
+		F.Intrinsic.Control.EndIf	
+		
+	''verify if sMONEDADR is in USD then add ER Variance to IMPPAGADO (AMT PAID)
+
+		f.Intrinsic.Control.If(v.local.sMONEDADR,=,"USD")
+		
+		'VALIDATION ON MORE THAN ONE INVOICE ON SALDOANTERIOR(PREV BAL)
+		F.Intrinsic.String.Build("select Count(batch_line) from AR_OPEN_ITEMS where invoice = '{0}' and batch_code = '10'",v.local.sInvoice,v.local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRowCountSA)
+		'check if there is more lines of batch_code '10'(multi-line) in the same invoice 
+		F.Intrinsic.Control.If(v.Local.sRowCountSA.Long,<>,1)
+			f.Intrinsic.String.Build("select SUM(EXCHANGE_AMT) AS IMPSALDOANT from AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_CODE = '10'", v.local.sInvoice,v.local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("select ABS(EXCHANGE_AMT) AS IMPSALDOANT from AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_CODE = '10'", v.local.sInvoice,v.local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+		F.Intrinsic.Control.EndIf
+		
+		
+		
+			f.Intrinsic.String.Build("SELECT Count(*) from AR_OPEN_ITEMS WHERE (batch_code = '11' or batch_code = '17') and invoice = '{0}'", v.local.sInvoice.Trim,v.local.sSQL)
+			F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.sRowCount)	
+'			F.Intrinsic.Control.If(v.local.sRowCount,=,"1")				
+'			f.Intrinsic.Control.Else	
+			F.Intrinsic.Control.If(v.local.sRowCount.long,<>,1)		
+				f.Intrinsic.String.Build("SELECT EXCHANGE_AMT from AR_OPEN_ITEMS WHERE batch_code = '10' and invoice = '{0}'",v.local.sInvoice.Trim,v.local.sSQL)
+				F.Data.DataTable.CreateFromSQL("CompPag_ERVariance_DT", "CONX", v.Local.sSQL)
+				f.Intrinsic.Control.For(v.Local.iCountER,0,v.DataTable.CompPag_ERVariance_DT.RowCount--,1)
+					v.Local.fRowCount.Set(v.Local.fIMPPAGADO)
+					v.Local.fIMPPAGADO.Set(v.DataTable.CompPag_ERVariance_DT(v.Local.iCountER).EXCHANGE_AMT!FieldValFloat)
+					f.Intrinsic.Math.Add(v.local.fIMPPAGADO,v.Local.fRowCount,v.Local.fIMPPAGADO)
+'					f.Intrinsic.UI.Msgbox(V.local.fIMPPAGADO,"FOR Variance")
+				f.Intrinsic.Control.Next(v.Local.iCountER)
+				f.Data.DataTable.Close("CompPag_ERVariance_DT")
+			F.Intrinsic.Control.EndIf
+			
+		'IF THE LNUMPARCIALIDAD IS 1 THEN FSALDOINSOLUTO = FIMPSALDOANT-FIMPPAGADO, ELSE TAKE THE LAST ROW AND SET IN fIMPSALDOANT = fIMPSALDOINSOLUTO(FROM LAST COUNT)
+
+							
+			F.Intrinsic.Control.If(v.local.lNUMPARCIALIDAD.long,=,1)					
+				'f.Intrinsic.Math.Sub(v.local.fIMPSALDOINSOLUTO,V.Local.fAMT_CM,v.Local.fIMPSALDOINSOLUTO)
+				v.local.fIMPPAGADO.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).IMPPAGADO_EXC!FieldValFloat)
+		''''REMOVED fIMPSALDOANT DUE TO MULTILINE 
+				'v.Local.fIMPSALDOANT.Set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).IMPSALDOANT_EXC!FieldValFloat)
+'				f.Intrinsic.String.Build("SELECT AMT_INVOICE from AR_OPEN_ITEMS WHERE batch_code = '17' and invoice = '{0}'",v.local.sInvoice.Trim,v.local.sSQL)
+'				f.Intrinsic.String.Build("SELECT EXCHANGE_AMT from AR_OPEN_ITEMS WHERE batch_code = '17' and invoice = '{0}'",v.local.sInvoice.Trim,v.local.sSQL)
+'				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.fERV)	
+'				f.Intrinsic.Math.Add(v.Local.fIMPSALDOANT,v.local.fERV,v.Local.fIMPSALDOANT)
+				f.Intrinsic.Math.Sub(v.Local.fIMPSALDOANT,v.Local.fAMT_CM,v.Local.fIMPSALDOANT)
+				F.Intrinsic.Math.Sub(v.local.fIMPSALDOANT,v.local.fIMPPAGADO,v.Local.fIMPSALDOINSOLUTO)
+
+			F.Intrinsic.Control.Else
+			
+				F.Intrinsic.String.Build("SELECT IMPSALDOINSOLUTO FROM GAB_5016_CFDI_PAGOS3 WHERE INVOICE = '{0}'", v.local.sInvoice,V.Local.sSQL)
+				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+				'v.local.fIMPSALDOANT.Set(v.local.fIMPSALDOINSOLUTO)
+'				f.Intrinsic.String.Build("SELECT AMT_INVOICE FROM AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_NUM = '{1}' AND BATCH_CODE = '17'",v.local.sInvoice,v.local.sID_PAGOS,V.Local.sSQL)
+'				f.Intrinsic.String.Build("SELECT EXCHANGE_AMT FROM AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_NUM = '{1}' AND BATCH_CODE = '17'",v.local.sInvoice,v.local.sID_PAGOS,V.Local.sSQL)
+'				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.fERV)
+'				f.Intrinsic.Math.Add(v.Local.fIMPSALDOANT,v.local.fERV,v.Local.fIMPSALDOANT)
+				f.Intrinsic.Math.Sub(v.Local.fIMPSALDOANT,v.Local.fAMT_CM,v.Local.fIMPSALDOANT)
+'				F.Intrinsic.String.Build("SELECT AMT_INVOICE FROM AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_NUM = '{1}' AND BATCH_CODE = '11'", v.local.sInvoice,v.local.sID_PAGOS,V.Local.sSQL)
+				F.Intrinsic.String.Build("SELECT ABS(EXCHANGE_AMT) as EXCHANGE_AMT FROM AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_NUM = '{1}' AND BATCH_CODE = '11'", v.local.sInvoice,v.local.sID_PAGOS,V.Local.sSQL)
+				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPPAGADO)
+				F.Intrinsic.Math.Sub(v.local.fIMPSALDOANT,v.local.fIMPPAGADO,v.Local.fIMPSALDOINSOLUTO)					
+				'f.Intrinsic.Math.Add(v.local.fIMPSALDOINSOLUTO,V.Local.fAMT_CM,v.Local.fIMPSALDOINSOLUTO)					
+			F.Intrinsic.Control.EndIf
+			
+		F.Intrinsic.Control.Else
+		    'IF IS CURRENCY IN MXN OR OTHER CURRENCY
+			'IF THE LNUMPARCIALIDAD IS 1 THEN FSALDOINSOLUTO = FIMPSALDOANT-FIMPPAGADO, ELSE TAKE THE LAST ROW AND SET IN fIMPSALDOANT = fIMPSALDOINSOLUTO(FROM LAST COUNT)
+						
+			F.Intrinsic.Control.If(v.local.lNUMPARCIALIDAD,=,"1")
+				
+				'f.Intrinsic.Math.Add(v.local.fIMPSALDOINSOLUTO,V.Local.fAMT_CM,v.Local.fIMPSALDOINSOLUTO)
+				v.local.fIMPPAGADO.set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).IMPPAGADO!FieldValFloat)
+	''''REMOVED fIMPSALDOANT DUE TO MULTILINE 
+				'v.Local.fIMPSALDOANT.Set(v.DataTable.CompPag_DocRel_DT(v.Local.iCount).IMPSALDOANT!FieldValFloat)
+				f.Intrinsic.Math.Sub(v.Local.fIMPSALDOANT,v.Local.fAMT_CM,v.Local.fIMPSALDOANT)
+				F.Intrinsic.Math.Sub(v.local.fIMPSALDOANT,v.local.fIMPPAGADO,v.Local.fIMPSALDOINSOLUTO)
+				
+				
+			F.Intrinsic.Control.Else
+			
+				F.Intrinsic.String.Build("SELECT IMPSALDOINSOLUTO FROM GAB_5016_CFDI_PAGOS3 WHERE INVOICE = '{0}'", v.local.sInvoice,V.Local.sSQL)
+				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fIMPSALDOANT)
+				f.Intrinsic.Math.Sub(v.Local.fIMPSALDOANT,v.Local.fAMT_CM,v.Local.fIMPSALDOANT)
+				'v.local.fIMPSALDOANT.Set(v.local.fIMPSALDOINSOLUTO)
+				f.Intrinsic.String.Build("SELECT ABS(AMT_INVOICE) as AMT_INVOICE FROM AR_OPEN_ITEMS WHERE INVOICE = '{0}' AND BATCH_NUM = '{1}'",v.local.sInvoice,v.local.sID_PAGOS,V.Local.sSQL)
+				F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.local.fIMPPAGADO)							
+				F.Intrinsic.Math.Sub(v.local.fIMPSALDOANT,v.local.fIMPPAGADO,v.Local.fIMPSALDOINSOLUTO)
+			F.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+
+		
+		'IF PAYMENT METHOD IS "PPD" THAN CONTINUE WITH THE PROCESS 
+		F.Intrinsic.Control.If(v.Local.sMETODODEPAGODR,=,"PPD")
+			F.Intrinsic.String.Build("INSERT INTO CFDI_COMPAGOS_DocRel(ID_PAGOS, IDDOCUMENTO, SERIE, FOLIO, MONEDADR, TIPOCAMBIODR, METODODEPAGODR, NUMPARCIALIDAD, IMPSALDOANT, IMPPAGADO, IMPSALDOINSOLUTO) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')",v.local.sID_PAGOS, v.local.sIDDOCUMENTO, v.local.sSERIE, v.local.lFOLIO, v.local.sMONEDADR, v.local.fTIPOCAMBIODR, v.local.sMETODODEPAGODR, v.local.lNUMPARCIALIDAD, v.local.fIMPSALDOANT, v.local.fIMPPAGADO, v.local.fIMPSALDOINSOLUTO,v.Local.sSQL2)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL2)
+		F.Intrinsic.String.Build("UPDATE GAB_5016_CFDI_PAGOS3 SET NUMPARCIALIDAD = '{1}',IMPSALDOINSOLUTO = '{2}' WHERE INVOICE = '{0}'",v.local.sInvoice,v.Local.lNUMPARCIALIDAD,v.Local.fIMPSALDOINSOLUTO,V.Local.sSQL)
+		F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+		F.Intrinsic.String.Build("Documento Generado para Factura '{0}' PARCIALIDAD:'{1}' SALDO ANTERIOR:'{2}' IMPORTE PAGADO:'{3}' SALDO INSOLUTO:'{4}'",v.local.sID_PAGOS,v.local.lNUMPARCIALIDAD,v.local.fIMPSALDOANT, v.local.fIMPPAGADO, v.local.fIMPSALDOINSOLUTO,v.Local.sMessage)
+			F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+			v.local.fIMPSALDOANT.Set(0)
+			v.local.fIMPSALDOANT2.Set(0)
+			v.local.fIMPPAGADO.Set(0)
+			v.local.fIMPPAGADO2.Set(0)		
+		
+		F.Intrinsic.Control.Else
+
+		
+		'ELSE THAN INFORM THAT PAYMENT PROOF IS NOT REQUIRED FOR THE GOV
+			F.Intrinsic.String.Build("Metodo de Pago no es PPD Pago parcialidades/diferido para Batch {0} Complemento de Pagos no es requerido por el SAT",v.local.sID_PAGOS,v.Local.sMessage)
+			F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+			'CREATE LOGS ON GAB_5016_PAGOS5
+			f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION UUID', '{2}')", V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+			
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Next(v.Local.iCount)
+f.Data.DataTable.Close("CompPag_DocRel_DT")
+
+
+'CREATE DATA TABLE TO ADD DATA TO TABLE CFDI_COMPAGOS_PAGO(TABLE CONTAINS INVOICE #, DATE TRANSACTION, EXCHANGE CURRENCY, AMT TRANS TOTAL, REFERENCE, DESC, BANK ACCT NUM)
+f.Intrinsic.String.Build("SELECT TERMINAL FROM GAB_5016_CFDI_PAGOS WHERE USR = '{0}'",v.Caller.User,V.Local.sSQL)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSQL,v.Local.sTerminal)
+F.Intrinsic.String.Build("SELECT DISTINCT B.GL_ACCOUNT AS GL_ACCOUNT,D.C_BANCO AS BANCO, B.CUSTOMER AS CUSTOMER,B.BATCH_NUM,B.DATE_TRANSACTION,SUBSTRING(E.USER_2,1,2)AS USER_2, B.EXCHANGE_CURR, B.EXCHANGE_RATE, B.AMT_TRANS_TOTAL, B.REFERENCE,D.RFC, D.DESCRIPCION, C.CUENTA from BI_COMB_JE_AUDIT A LEFT JOIN AR_OPEN_ITEMS B ON A.BATCH_NUM = B.BATCH_NUM LEFT JOIN CFDI_COMPAGOS_BANCO C ON C.CUSTOMER = B.CUSTOMER LEFT JOIN CFDI_C_BANCOS D ON C.BANCO = D.C_BANCO LEFT JOIN order_hist_head E on b.invoice = E.invoice WHERE A.RPTID = '000817' AND A.TRMNL = '{0}' and batch_code = '11' ORDER BY B.DATE_TRANSACTION",v.Local.sTerminal,v.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("CompPag_Pagos_DT", "CONX", v.Local.sSQL)
+F.Data.DataTable.AddColumn("CompPag_Pagos_DT","BANK_ACCOUNT","String")
+F.Data.DataTable.AddColumn("CompPag_Pagos_DT","RFCBEN","String")
+
+
+
+'DICTIONARY CTEBENEFICIARIO(DIC WITH RECIPIENT ACCT NUM)
+F.Data.Dictionary.CreateFromSQL("CTEBENEFICIARIO_Dic", "CONX", "SELECT DISTINCT SUBSTRING(BANK_DESC,1,3) AS BANCO,BANK_ACCOUNT FROM CASH_ACCOUNT")
+F.Data.Dictionary.SetDefaultReturn("CTEBENEFICIARIO_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_Pagos_DT", "CTEBENEFICIARIO_Dic", "BANCO", "BANK_ACCOUNT")
+F.Data.Dictionary.Close("CTEBENEFICIARIO_Dic")
+
+'DICTIONARY RFCEMISORCTABEN(DIC WITH ISSUE ACCT NUM)
+F.Data.Dictionary.CreateFromSQL("RFCEMISORCTABEN_Dic", "CONX", "SELECT DISTINCT SUBSTRING(A.BANK_DESC,0,2) AS BANCO,B.RFC AS RFCBEN FROM CASH_ACCOUNT A INNER JOIN CFDI_C_BANCOS B ON SUBSTRING(A.BANK_DESC,0,2) = B.C_BANCO")
+F.Data.Dictionary.SetDefaultReturn("RFCEMISORCTABEN_Dic", "")
+F.Data.DataTable.FillFromDictionary("CompPag_Pagos_DT", "RFCEMISORCTABEN_Dic", "BANCO", "RFCBEN")
+F.Data.Dictionary.Close("RFCEMISORCTABEN_Dic")
+
+'USING A FOR LOOP TO INSERT DATA ROWS INTO CUSTOM TABLE CFDI_COMPAGOS_PAGO
+F.Intrinsic.Control.For(V.Local.iCountP,0,V.DataTable.CompPag_Pagos_DT.RowCount--,1)
+	V.local.sIDPAGO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).BATCH_NUM!FieldValString)
+	V.local.sFECHAPAGO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).DATE_TRANSACTION!FieldValString)
+	V.Local.sCustomer.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).CUSTOMER!FieldValString)
+	
+'	'row count to see if there is data selected in bank information
+'	F.Intrinsic.String.Build("select Count(*) FROM CFDI_COMPAGOS_BANCO  WHERE customer = '{0}'",V.Local.sCustomer,v.Local.sSQL)
+'	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRowCount)
+'	f.Intrinsic.Control.If(v.Local.sRowCount,=,"0")
+'		f.Intrinsic.String.Build("Favor de llenar la Informacion Bancaria del Cliente '{0}' en Cuentas por Cobrar > Archivo > Clientes > Abrir > Opciones > CFDI Pagos",V.Local.sCustomer,v.Local.sMessage)
+'		F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'		F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+'	F.Intrinsic.Control.EndIf
+
+'	'row count to see if there is data selected in bank information
+'	F.Intrinsic.String.Build("select Count(*) FROM CFDI_COMPAGOS_BANCO  WHERE customer = '{0}'",V.Local.sCustomer.Trim,v.Local.sSQL)
+'	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRowCount)
+'	f.Intrinsic.Control.If(v.Local.sRowCount,=,"0")
+'		f.Intrinsic.String.Build("Favor de llenar la Informacion Bancaria del Cliente '{0}' en Cuentas por Cobrar > Archivo > Clientes > Abrir > Opciones > CFDI Pagos",V.Local.sCustomer.Trim,v.Local.sMessage)
+'		F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'			'CREATE LOGS ON GAB_5016_PAGOS5
+'		f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION BANCARIA', '{2}')", V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+'		F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+''		v.Global.sCustomer.Set(v.Local.sCustomer)
+'		'gui.F_BankInfo2..Show
+'		f.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+'	F.Intrinsic.Control.EndIf
+		
+	
+	
+	
+	F.Intrinsic.String.Right(V.local.sFECHAPAGO,2,Variable.local.sYear)
+	F.Intrinsic.String.Mid(V.local.sFECHAPAGO,3,2,Variable.local.sDay)
+	F.Intrinsic.String.Left(V.local.sFECHAPAGO,2,Variable.local.sMonth)
+	F.Intrinsic.string.concat("20",V.local.sYear,"-",V.local.sMonth,"-",V.local.sDay,"T12:00:00",V.local.sFECHAPAGO)
+	v.Local.sFORMADEPAGO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).USER_2!FieldValTrim)
+	F.Intrinsic.Control.If(v.Local.sFORMADEPAGO,=,"99")
+		F.Intrinsic.String.Build("Selecciona la Forma de Pago para Batch {0}",v.Local.sIDPAGO,v.Local.sMessage)
+	 	F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+		F.Intrinsic.String.Split("FORMAPAGO*!*DESCRIPCION","*!*",v.local.sTitles)
+		F.Intrinsic.String.Split("100*!*800","*!*",v.local.iWidths)
+		F.Intrinsic.UI.Browser("Select a FORMAPAGO","conx","select * from CFDI_C_FORMAPAGO",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+		F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+			v.Local.sFORMADEPAGO.Set(V.Local.sRet(0).Trim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	'V.local.sMONEDA.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).EXCHANGE_CURR!FieldValString)
+	f.Intrinsic.String.Build("select distinct exchange_curr from AR_OPEN_ITEMS where batch_code = '11' and batch_num = '{0}'",V.local.sIDPAGO,v.Local.sSQL)
+	F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sMONEDA)
+	v.Local.sMoneda.Set(v.Local.sMoneda.Trim)
+	v.Local.sMoneda.Set(v.Local.sMoneda.UCase)
+	V.local.fTIPOCAMBIO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).EXCHANGE_RATE!FieldValFloat)
+	V.local.fMONTO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).AMT_TRANS_TOTAL!FieldValFloat)
+	f.Intrinsic.Control.If(V.local.sMONEDA,=,"USD")
+	'set MONTO as EXCHANGE RATE
+		f.Intrinsic.String.Build("select distinct exchange_amt_tot from AR_OPEN_ITEMS WHERE BATCH_NUM ='{0}' and batch_code = '11'",V.local.sIDPAGO,v.Local.sSQL)
+		F.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fMONTO)
+	f.Intrinsic.Control.EndIf
+		
+	V.local.sNUMOPERACION.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).REFERENCE!FieldValString)
+	V.local.sRFCEMISORCTAORD.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).RFC!FieldValString)
+	V.local.sNOMBANCOORDEXT.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).DESCRIPCION!FieldValString)
+	V.local.sCTAORDENANTE.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).CUENTA!FieldValString)
+	
+'	Function.Intrinsic.Debug.InvokeDebugger
+'	Function.Intrinsic.Debug.Stop
+'	
+''IF FORMA DE PAGO 02 CHEQUE THEN CUENTA = 11 DIGITS, CLABE 18 DIGITS AND STOP PROCESS 
+'	F.Intrinsic.Control.If(v.Local.sFORMADEPAGO,=,"02")
+'		F.Intrinsic.String.Len(V.Local.sCTAORDENANTE,V.Local.sCTACharCount)
+'		f.Intrinsic.Control.If(v.Local.sCTACharCount,<>,11)
+'			F.Intrinsic.String.Build("La forma de Pago = Cheque debe ser de 11 digitos. El numero de cuenta {0} para el cliente '{1}' no contiene la informacion correcta para el timbrado dentro de Global Shop. Favor de realizar el pago de nuevo o realizar el complemento de pagos por medio del portal  Facturan.do",V.Local.sCTAORDENANTE,v.local.sCustomer,v.Local.sMessage)
+'			F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'		
+'	'CREATE LOGS ON GAB_5016_PAGOS5
+'			f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION UUID', '{2}')", 	V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+'			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'		f.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.EndIf	
+	
+''IF FORMA DE PAGO = '03' THEN sCTAORDENANTE 10, 16 o 18 CHARACTERS LONG
+'	F.Intrinsic.Control.If(v.Local.sFORMADEPAGO,=,"03")
+'		F.Intrinsic.String.Len(V.Local.sCTAORDENANTE,V.Local.sCTACharCount)
+'		F.Intrinsic.UI.Msgbox(V.Local.sCTACharCount,"Tama?o de caracteres")
+'		f.Intrinsic.Control.If(v.Local.sCTACharCount,<>,10,"OR",v.Local.sCTACharCount,<>,16,"OR",v.Local.sCTACharCount,=,18)
+'			F.Intrinsic.String.Build("El numero de cuenta {0} para el cliente '{1}' debe ser de 10, 16 o 18 digitos. No contiene la informacion correcta para el timbrado dentro de Global Shop. Favor de realizar el pago de nuevo o realizar el complemento de pagos por medio del portal  Facturan.do",V.Local.sCTAORDENANTE,v.local.sCustomer,v.Local.sMessage)
+'			F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+		
+'	'CREATE LOGS ON GAB_5016_PAGOS5
+'			f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION UUID', '{2}')", 	V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+'			F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'		f.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.EndIf
+
+
+''	VALIDATION IF THERE IS NO DATA CONTAINING ACCOUNT NUMBER
+'	f.Intrinsic.Control.If(V.local.sCTAORDENANTE,=,"")
+'		F.Intrinsic.String.Build("La informacion bancaria del cliente {0} no contiene el numero de Cuenta Ordenante para timbrado dentro de Global Shop. Favor de realizar el complemento de pagos por medio del portal Facturan.do",v.local.sCustomer,v.Local.sMessage)
+'		F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+'		'CREATE LOGS ON GAB_5016_PAGOS5
+'		f.Intrinsic.String.Build("INSERT INTO GAB_5016_PAGOS5(ID_PAGOS,DATE,LOCATION,MESSAGE) VALUES ('{0}', '{1}', 'INFORMACION UUID', '{2}')", V.Local.sID_PAGOS,V.Ambient.Now,v.Local.sMessage,v.Local.sSQL)
+'		F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+'		F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+'	f.Intrinsic.Control.EndIf
+
+	
+	V.local.sRFCEMISORCTABEN.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).RFCBEN!FieldValString)
+	V.local.sCTEBENEFICIARIO.Set(v.DataTable.CompPag_Pagos_DT(v.Local.iCountP).BANK_ACCOUNT!FieldValString)
+
+'IF FORMA DE PAGO = 01 THEN DELETE RFCEMISORCTAORD, NOMBANCOORDEXT, CTAORDENANTE, RFCEMISORCTABEN, CTEBENEFICIARIO
+	F.Intrinsic.Control.If(v.Local.sFORMADEPAGO,=,"01")
+		V.local.sNUMOPERACION.Set("")
+		V.local.sRFCEMISORCTAORD.Set("")
+		V.local.sNOMBANCOORDEXT.Set("")
+		V.local.sCTAORDENANTE.Set("")
+		V.local.sRFCEMISORCTABEN.Set("")
+		V.local.sCTEBENEFICIARIO.Set("")
+	F.Intrinsic.Control.EndIf
+
+	v.Local.sCADPAGO.Set("")
+	F.Intrinsic.String.Build("select SWIFT from CFDI_COMPAGOS_BANCO WHERE CUSTOMER ='{0}'",V.local.sCustomer,V.Local.sSQL)
+	F.ODBC.Connection!CONX.ExecuteAndReturn(V.Local.sSQL,v.Local.lFOLIO)
+	F.Intrinsic.Control.If(v.Local.lFOLIO,=,"")
+		V.local.sINTERNACIONAL.Set("")
+		F.Intrinsic.Control.Else
+		V.local.sINTERNACIONAL.Set("Y")
+	F.Intrinsic.Control.EndIf
+	V.local.sTIMBRAR.Set("Y")
+	v.Local.sXML_URL.Set("")
+	F.Intrinsic.String.Build("INSERT INTO CFDI_COMPAGOS_PAGO(ID_PAGOS,FECHAPAGO,FORMADEPAGOP,MONEDAP,TIPOCAMBIOP,MONTO,NUMOPERACION,RFCEMISORCTAORD,NOMBANCOORDEXT,CTAORDENANTE,RFCEMISORCTABEN,CTEBENEFICIARIO,CADPAGO,INTERNACIONAL,TIMBRAR,XML_URL) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}')",v.local.sIDPAGO, v.local.sFECHAPAGO, v.local.sFORMADEPAGO, v.local.sMONEDA,v.local.fTIPOCAMBIO, v.local.fMONTO, v.local.sNUMOPERACION, v.local.sRFCEMISORCTAORD, v.local.sNOMBANCOORDEXT, v.local.sCTAORDENANTE, v.local.sRFCEMISORCTABEN, v.local.sCTEBENEFICIARIO, v.local.sCADPAGO, v.local.sINTERNACIONAL, v.local.sTIMBRAR, v.local.sXML_URL,V.Local.sSQL)
+	F.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	F.Intrinsic.String.Build("Complemento de Pagos Exportado para Batch '{0}'",V.local.sIDPAGO,v.Local.sMessage)
+	F.Intrinsic.UI.Msgbox(v.Local.sMessage)
+	
+F.Intrinsic.Control.Next(V.Local.iCountP)
+f.Data.DataTable.Close("CompPag_Pagos_DT")
+F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)	
+Program.Sub.BatchPostBankInfo.End
+
+Program.Sub.F_BankInfo_UnLoad.Start
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+Program.Sub.F_BankInfo_UnLoad.End
+
+'''''ANULAR PAGO MENU''''''	
+Program.Sub.cmdPagosBrowser_Click.Start
+v.Local.sRet.Declare
+v.Local.sTitles.Declare
+v.Local.iWidths.Declare(long)
+v.Local.sSQL.Declare
+v.Local.iCount.Declare
+v.Local.sInvoice.Declare
+v.Local.sInvoices.Declare
+'FROM A CUSTOM BROWSER GET THE TABLE CFDI_COMPAGOS_PAGO(BANK NAME, BUSSINESS NAME) AND STORE IT INTO 2 TEXT BOXES
+F.Intrinsic.String.Split("ID_PAGOS*!*FECHAPAGO*!*MONTO","*!*",v.local.sTitles)
+F.Intrinsic.String.Split("200*!*800*!*800","*!*",v.local.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("SELECIONA PAGO","CONX","select ID_PAGOS,FECHAPAGO,MONTO from CFDI_COMPAGOS_PAGO",v.Local.sTitles,v.Local.iWidths,v.Local.sRet)
+F.Intrinsic.Control.If(v.Local.sRet,"=","***CANCEL***")
+ F.Intrinsic.Control.Else
+ F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+ 	V.Global.sID_Pago.Set(V.Local.sRet(0))
+ 	GUI.F_PagosCancel.txtIDPagos.Text(V.Local.sRet(0).Trim)
+ 	gui.F_PagosCancel.txtMonto.Text(v.Local.sRet(2).Trim)
+'SET TEXTBOXL INVOICES INCLUDED IN THE AR BATCH
+F.Intrinsic.String.Build("select distinct b.invoice AS FACTURA, a.IMPPAGADO AS IMPPAGADO,a.iddocumento as IDDOCUMENTO from CFDI_COMPAGOS_DOCREL A INNER JOIN FACTURAS B ON A.iddocumento = B.UUID_cfdi where ID_PAGOS = '{0}'",v.Local.sRet(0).Trim,v.Local.sSQL)
+f.Data.DataTable.CreateFromSQL("IDPagosFact_DT","CONX",v.Local.sSQL,True)
+
+f.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.IDPagosFact_DT.RowCount--,1)
+	v.Local.sInvoice.Set(v.DataTable.IDPagosFact_DT(v.Local.iCount).FACTURA!FieldValString)
+	f.Intrinsic.String.Build("{0} {1}",v.Local.sInvoices,v.Local.sInvoice,v.Local.sInvoices)
+f.Intrinsic.Control.Next(v.Local.iCount)
+'f.Intrinsic.UI.Msgbox(v.Local.sInvoices)
+gui.F_PagosCancel.txtInvoices.Text(v.Local.sInvoices)
+F.Intrinsic.Control.EndIf
+Program.Sub.cmdPagosBrowser_Click.End
+
+Program.Sub.cmdAnularPago_Click.Start
+v.Local.iCount.Declare
+v.Local.fMonto.Declare
+v.Local.sInvoice.Declare
+v.Local.sSQL.Declare
+v.Local.fSaldoInsoluto.Declare
+V.Local.sIDDOCUMENTO.Declare
+v.Local.fIMPPAGADO.Declare
+v.Local.fNUMPARCIALIDAD.Declare
+V.Local.SMessage.Declare
+
+'REMOVE AMMOUNT FROM CANCELED PAYMENT FROM TABLES CFDI_COMPAGOS_PAGO, CFDI_COMPAGOS_DOCREL AND GAB_5016_CFDI_PAGOS3
+
+f.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.IDPagosFact_DT.RowCount--,1)
+	'remove ammount from GAB_5016_CFDI_PAGOS3
+	v.Local.sInvoice.Set(v.DataTable.IDPagosFact_DT(v.Local.iCount).FACTURA!FieldValString)
+	v.Local.fIMPPAGADO.Set(v.DataTable.IDPagosFact_DT(v.Local.iCount).IMPPAGADO!FieldValFloat)
+	V.Local.sIDDOCUMENTO.Set(V.DataTable.IDPagosFact_DT(V.Local.iCount).IDDOCUMENTO!FieldValString)
+	f.Intrinsic.String.Build("select impsaldoinsoluto from GAB_5016_CFDI_PAGOS3 where invoice = '{0}'",v.Local.sInvoice,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fSaldoInsoluto)
+	f.Intrinsic.Math.Add(v.Local.fSaldoInsoluto,v.Local.fIMPPAGADO,v.Local.fSaldoInsoluto)
+	'Revert back 1 the counter of PARCIALIDAD
+	f.Intrinsic.String.Build("select NUMPARCIALIDAD from GAB_5016_CFDI_PAGOS3 where invoice = '{0}'",v.Local.sInvoice,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.fNUMPARCIALIDAD)
+	f.Intrinsic.Math.Sub(v.Local.fNUMPARCIALIDAD,1,v.Local.fNUMPARCIALIDAD)
+	'UPDATE GAB_5016_CFDI_PAGOS3
+	f.Intrinsic.String.Build("UPDATE GAB_5016_CFDI_PAGOS3 SET NUMPARCIALIDAD = '{0}',IMPSALDOINSOLUTO = '{1}'  WHERE INVOICE = '{2}'",V.Local.fNUMPARCIALIDAD,V.Local.fSaldoInsoluto,V.Local.sInvoice,V.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	
+	'DELETE ALL PARCIALIDADES WHEN IS 0
+	F.Intrinsic.String.Build("DELETE FROM GAB_5016_CFDI_PAGOS3 WHERE NUMPARCIALIDAD = '0' and INVOICE = '{0}'",v.Local.sInvoice,V.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)	
+	
+	'REMOVE LINE FROM TABLE CFDI_COMPAGOS_DOCREL
+	F.Intrinsic.String.Build("DELETE FROM CFDI_COMPAGOS_DOCREL WHERE IDDOCUMENTO = '{0}' and ID_PAGOS = '{1}'",V.Local.sIDDOCUMENTO,v.Global.sID_Pago,V.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+f.Intrinsic.Control.Next(v.Local.iCount)
+
+
+
+'REMOVE ID_PAGOS FROM CFDI_COMPAGOS_PAGO
+F.Intrinsic.String.Build("DELETE FROM CFDI_COMPAGOS_PAGO WHERE ID_PAGOS = '{0}'",V.Global.sID_Pago,V.Local.sSQL)
+f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+f.Intrinsic.String.Build("Pago Anulado REP para ID {0}. Proceda a cancelar REP en portal facturan.do o SAT.",v.Global.sID_Pago,v.Local.SMessage)
+f.Intrinsic.UI.Msgbox(v.Local.SMessage)
+f.Intrinsic.Control.CallSub(F_PagosCancel_UnLoad)
+Program.Sub.cmdAnularPago_Click.End
+
+Program.Sub.F_PagosCancel_UnLoad.Start
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+
+F.Data.DataTable.Close("IDPagosFact_DT")
+Program.Sub.F_PagosCancel_UnLoad.End
+
+Program.Sub.F_ErrorDash_UnLoad.Start
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+Program.Sub.F_ErrorDash_UnLoad.End
+
+Program.Sub.ErrorDashboardLoad.Start
+f.Data.DataTable.CreateFromSQL("ERRORESCOMP_DT","CONX","select * from GAB_5016_PAGOS5 ",True)
+f.Data.DataView.Create("ERRORESCOMP_DT", "ERRORESCOMP_DV", 22)
+GUI.F_ErrorDash.GsGridErrores.AddGridviewFromDataview("ERRORESCOMP_GV", "ERRORESCOMP_DT", "ERRORESCOMP_DV")
+
+'SET PROPERTIES
+
+GUI.F_ErrorDash.GsGridErrores.SetGridviewProperty("ERRORESCOMP_GV","AllowSort",True)
+GUI.F_ErrorDash.GsGridErrores.SetGridViewProperty("ERRORESCOMP_GV","AllowFilter",True)
+'gui.F_ErrorDash.GsGridErrores.SetGridViewProperty("ERRORESCOMP_GV", "OptionsViewColumnAutoWidth", True)
+
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","ID_PAGOS", "Caption", "BATCH")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","DATE", "Caption", "FECHA DE POSTEO")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","LOCATION", "Caption", "UBICACION")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","MESSAGE", "Caption", "ERROR")
+
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","ID_PAGOS","HeaderBackColor","LightBlue")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","DATE","HeaderBackColor","LightBlue")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","LOCATION","HeaderBackColor","LightBlue")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","MESSAGE","HeaderBackColor","LightBlue")
+
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","ID_PAGOS", "MaxWidth",60)
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","DATE", "MaxWidth",150)
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","LOCATION","MaxWidth",300)
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","MESSAGE", "MaxWidth",500)
+
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","ID_PAGOS", "HeaderHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","DATE", "HeaderHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","LOCATION","HeaderHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","MESSAGE", "HeaderHAlignment", "Center")
+
+
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","ID_PAGOS", "CellHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","DATE", "CellHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","LOCATION","CellHAlignment", "Center")
+GUI.F_ErrorDash.GsGridErrores.SetColumnProperty("ERRORESCOMP_GV","MESSAGE", "CellHAlignment", "Center")
+
+GUI.F_ErrorDash.GsGridErrores.MainView("ERRORESCOMP_GV")
+gui.F_ErrorDash..Show
+
+Program.Sub.ErrorDashboardLoad.End
+
+Program.Sub.F_ErrorDash_UnLoad1.Start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+Program.Sub.F_ErrorDash_UnLoad1.End
+
+Program.Sub.CMDBANKINFOYES_CLICK.Start
+GUI.F_BankInfo..Show
+GUI.F_BankInfo.cmdSaveInfoBanco.Visible(False)
+Gui.F_BankInfo.cmdSaveInfoBanco2.Caption("GUARDAR")
+
+
+Program.Sub.CMDBANKINFOYES_CLICK.End
+
+Program.Sub.CMDBANKINFONO_CLICK.Start
+F.Intrinsic.Control.CallSub(F_BankInfo_UnLoad)
+Program.Sub.CMDBANKINFONO_CLICK.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
